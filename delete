@@ -1,0 +1,23 @@
+#include<stdio.h>
+void main()
+{
+int arr[30],i,loc,num;
+printf("Enter the size of an array:");
+scanf("%d",&num);
+printf("Enter the elemnts %d:",num);
+for(i=0;i<num;i++)
+{
+scanf("%d",&arr[i]);
+}
+printf("Enter the location to delete the value:");
+scanf("%d",&loc);
+while(loc<num)
+{
+arr[loc-1]=arr[loc];
+loc++;
+}
+num--;
+for(i=0;i<num;i++)
+printf("Array after deletion:%d\n",arr[i]);
+}
+
